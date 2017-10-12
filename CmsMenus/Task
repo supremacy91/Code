@@ -1,0 +1,16 @@
+create a Magento CMS menu extension:
+Should work for vesions 1.7.x and up
+scope: create a new extension that will have the option for admin users to easily add and manage menus on cms pages
+General - extension should be under "Cminds" namespace in the community code pool
+Admin:
+The extension will add a new menu option under the cms dropdown called "cms menus"
+this will open a admin grid with 6 columns: id, name, date created, date updated, , status (enabled/disabled), edit (link). also a button on top right to "Add New", and action for mass delete. (grid should have check boxes)
+when clicking edit, or add new the edit menu page will open
+you have 2 tabs: general and links
+general: have 2 fields: name (text), status (enabled/disabled)
+links: place where you can add/edit/delete menu links
+each link has 3 text fields: label (text), url (text), and type (drop down: open in same page, open in new tab)
+on each cms page edit, you will need to add a new tab called "menus". with a drop-down where a user can assign a menu to a cms page.
+Front end :
+on cms page that has assigned menu, the menu will show vertically on the top left side.
+

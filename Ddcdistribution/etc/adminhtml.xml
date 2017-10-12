@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<config>
+<!--    <menu>
+
+
+
+                <web4pro>
+                    <title>Web4pro</title>
+                    <sort_order>1000</sort_order>
+                    <children>
+                        <menuExt>
+                            <title>DCC Distribution file path</title>
+                            <action>menu_admin/adminhtml_menu</action>-
+                            <sort_order>100</sort_order>
+                        </menuExt>
+
+                    </children>
+                </web4pro>
+
+    </menu>-->
+
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <dcc>
+                                            <title>DCC Module</title>
+                                        </dcc>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+
+
+</config>
+

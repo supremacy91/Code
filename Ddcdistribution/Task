@@ -1,0 +1,30 @@
+Суть модуля - программный импорт продуктов, данные о которых занесены в XML файл file:///tmp/mozilla_maks0/DCCItems2.xml
+нельзя использовать метод save(), вся работа с базой и с EAV структурой должна быть происходит напрямую занесением нужных значений в таблицы. Также нужные кастомные аттрибуты вместе с кастомным аттрибут сетом создаются программно.
+Вся реализация по сути в файле Observer - там 2 крона, которые запускаются на сервере рез в стуки. Первый создает и заполняет кастомную flat  таблицу, также создает нужные аттрибуты, некоторые из которых учавствуют в Layered navigation на фронте. Второй из нее берет данные и заполняет EAV структуру нужных таблиц для занесения товаров с их значениями в админку и на фронт. 
+
+Ниже указано соответсвие категорий от дистрибьютора и в админке. Недостающие категории клиент самостоятельно создаст на живом сайте.
+
+Товары без категории должны попасть в корневую и соответвенно не попадать на фронт, будут обрабатываться мануально и привязватся к категории если клиент посчитает необходимым.
+
+CAB-ASS - Skip products
+CAB-FOC - Skip products
+CAB-TPCC - Skip products
+INFRA-XXX - Skip products
+KMGE-RES - Skip products
+NEW2B - Skip products
+Options - Skip products
+Other - Skip products
+P-Series - Skip products
+Schneider - Skip products
+
+UPS - Biuro įranga ir reikmenys > Nepertraukiamos srovės šaltiniai (UPS)
+PC-CPU - Kompiuterių komponentai > Procesoriai (CPU)
+PC- Kompiuterija > Stacionarieji kompiuteriai
+PC-OPT,
+SPARE,
+NOTE-OPT - Kompiuterių komponentai (all products DISABLED)
+Serv-OPT,
+Serv-CPU,
+Stor-opt - Kompiuterių komponentai > Serverių komponentai
+Server - Kompiuterija > Serveriai
+

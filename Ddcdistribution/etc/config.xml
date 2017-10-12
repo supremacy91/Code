@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Web4pro_Ddcdistribution>
+            <version>0.0.0.1</version>
+        </Web4pro_Ddcdistribution>
+    </modules>
+    <global>
+        <models>
+            <ddcdistribution>
+                <class>Web4pro_Ddcdistribution_Model</class>
+                <resourceModel>ddcdistribution_resource</resourceModel>
+            </ddcdistribution>
+            <ddcdistribution_resource>
+                <class>Web4pro_Ddcdistribution_Model_Resource</class>
+                <entities>
+                    <ddcdistribution>
+                        <table>ddcdistribution</table>
+                    </ddcdistribution>
+                </entities>
+            </ddcdistribution_resource>
+        </models>
+        <resources>
+            <web4pro_setup>
+                <setup>
+                    <module>Web4pro_Ddcdistribution</module>
+                </setup>
+            </web4pro_setup>
+        </resources>
+    </global>
+    <crontab>
+        <jobs>
+            <ddcdistribution_fill_database>
+                <schedule>
+                    <cron_expr>*/4 * * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>ddcdistribution/observer::fillDatabase</model>
+                </run>
+            </ddcdistribution_fill_database>
+            <ddcdistribution_import_database>
+                <schedule>
+                    <cron_expr>*/4 * * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>ddcdistribution/observer::importDatabase</model>
+                </run>
+            </ddcdistribution_import_database>
+
+        </jobs>
+    </crontab>
+</config>
